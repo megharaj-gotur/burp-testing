@@ -1,14 +1,13 @@
 language: scala
-scala: 2.11.8
+
 jdk: openjdk8
-branches:
-  only: master
-cache:
-  directories:
-  - "$HOME/.ivy2/cache"
-  - "$HOME/.sbt/boot/"
+
+scala:
+   - 2.10.4
+   - 2.12.10
+
 script:
-- sbt clean coverage lint compile:scalastyle
-  test:scalastyle compile:compile test:compile test:test coverageReport
+   - sbt ++$TRAVIS_SCALA_VERSION test
+
 notifications:
   email: mgotur@xtivia.com
