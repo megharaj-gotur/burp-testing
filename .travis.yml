@@ -8,6 +8,9 @@ scala:
 
 script:
    - sbt compile test run
+   
+script:   
+   - java -version
 
 notifications:
   email: mgotur@xtivia.com
