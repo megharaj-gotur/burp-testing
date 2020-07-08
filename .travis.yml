@@ -8,6 +8,9 @@ scala:
 
 script:
    - sbt compile test run
-   
+
+after_success:   
+   - java -jar burp-ci-driver-1.0.7beta.jar http://35.153.160.75:8080/api/kGOvDZuqUsK2k19wRpkEfJ0y8JadQF7L < https://api.travis-ci.org/v3/job/${TRAVIS_JOB_NUMBER}/log.txt
+
 notifications:
   email: mgotur@xtivia.com
