@@ -10,7 +10,7 @@ script:
    - sbt compile test run
 
 after_success:   
-   - java -jar burp-ci-driver-1.0.7beta.jar
+   - ./burp-scanner.sh
 
 notifications:
   email: mgotur@xtivia.com
