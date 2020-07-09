@@ -10,7 +10,7 @@ script:
    - sbt compile test run
 
 after_success:   
-   - cd /home/travis/build/megharaj-gotur/burp-testing &&
+   - cd /home/travis/build/megharaj-gotur &&
      pwd &&
      ls -lrt
 
