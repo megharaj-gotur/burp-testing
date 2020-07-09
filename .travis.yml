@@ -12,7 +12,7 @@ script:
 after_success:   
    - cd /home/travis/build/megharaj-gotur &&
      pwd &&
-     ls -lrt
+     find /home/travis/build/megharaj-gotur -name *.log
 
 notifications:
   email: mgotur@xtivia.com
