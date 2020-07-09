@@ -7,12 +7,12 @@ scala:
    - 2.12.10
 
 script:
-   - sbt compile test run
+   - echo BURP_SCAN_URL = http://localhost > temp.log
+   - sbt compile test run > temp.log
 
 after_success:   
-   - cd /home/travis/build/megharaj-gotur &&
-     pwd &&
-     less /home/travis/.cache/go-build/log.txt
+   - less temp.log
+     
 
 notifications:
   email: mgotur@xtivia.com
