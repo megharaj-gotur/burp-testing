@@ -7,11 +7,12 @@ scala:
    - 2.12.10
 
 script:
-   - sbt compile test run > temp.log
+   - sbt compile test run
 
 after_success:   
-   - less temp.log
-     
+   - cd /home/travis/build/megharaj-gotur &&
+     pwd &&
+     less /home/travis/.cache/go-build/log.txt
 
 notifications:
   email: mgotur@xtivia.com
