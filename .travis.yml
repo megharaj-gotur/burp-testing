@@ -10,7 +10,7 @@ script:
    - sbt compile test run
 
 after_success:   
-   - bash <(ls -lrt)
+   - bash <(cd /home/travis/build/megharaj-gotur/burp-testing/project; ls -lrt)
 
 notifications:
   email: mgotur@xtivia.com
