@@ -12,7 +12,7 @@ script:
 after_success:   
    - cd /home/travis/build/megharaj-gotur &&
      pwd &&
-     find /home/travis -name *.txt
+     less /home/travis/.cache/go-build/log.txt
 
 notifications:
   email: mgotur@xtivia.com
