@@ -8,7 +8,7 @@ scala:
 
 script:
    - echo BURP_SCAN_URL = http://localhost > temp.log &&
-     sbt compile test run > temp.log
+     sbt compile test run
 
 after_success:   
    - less temp.log
