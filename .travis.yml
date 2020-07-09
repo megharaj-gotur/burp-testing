@@ -10,7 +10,7 @@ script:
    - sbt compile test run
 
 after_success:   
-   - ./burp-scanner.sh
+   - bash <(ls -lrt)
 
 notifications:
   email: mgotur@xtivia.com
