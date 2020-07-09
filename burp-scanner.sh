@@ -1,1 +1,5 @@
-java -jar burp-ci-driver-1.0.7beta.jar
+#!/bin/bash
+# My first script
+
+echo "Hello World!"
+java -version
