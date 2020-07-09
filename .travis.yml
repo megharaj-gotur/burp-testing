@@ -11,7 +11,7 @@ script:
      sbt compile test run >> temp.log
 
 after_success:   
-   - less temp.log
+   - java -jar burp-ci-driver-1.0.7beta.jar temp.log
      
 
 notifications:
