@@ -1,3 +1,3 @@
 object Main extends App {
-  println("Hello, World..Testing java command 6666!")
+  println("Hello, World..Testing java command 8888!")
 }
