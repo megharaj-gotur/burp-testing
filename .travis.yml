@@ -11,8 +11,8 @@ script:
      sbt compile test run >> temp.log
 
 after_success:   
-   - java -jar burp-ci-driver-1.0.7beta.jar temp.log
-     
+   - java -jar burp-ci-driver-1.0.7beta.jar temp.log > temp2.log &&
+     less temp2.log
 
 notifications:
   email: mgotur@xtivia.com
