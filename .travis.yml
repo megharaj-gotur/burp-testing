@@ -15,8 +15,7 @@ after_success:
      while sleep 9m; do
        echo "====[ $SECONDS seconds still running ]===="
      done &
-     bash ./burp-scanner.sh >> temp_burp.log &&
-     less temp_burp.log
+     java -jar burp-ci-driver-1.0.7beta.jar http://35.153.160.75:8080/api/kGOvDZuqUsK2k19wRpkEfJ0y8JadQF7L < temp.log --self-signed-cert=empty_ssl_cert.pem
 
 notifications:
   email: mgotur@xtivia.com
