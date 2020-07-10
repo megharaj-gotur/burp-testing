@@ -6,7 +6,7 @@ scala:
    - 2.10.4
    - 2.12.10
 
-script:
+script: travis_wait 20
    - echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> temp.log &&
      sbt compile test run >> temp.log
 
