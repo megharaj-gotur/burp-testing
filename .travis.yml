@@ -11,10 +11,12 @@ script:
      sbt compile test run >> temp.log
 
 after_success:   
-   - bash <(curl -s http://35.153.160.75:8080) > temp_curl.log &&
-     echo ====================================================================== >> temp2.log &&
+   - bash <(curl -s http://cnn.com) > temp_cnn.log &&
+     bash <(curl -s http://35.153.160.75:8080) > temp_burp.log &&
      bash ./burp-scanner.sh >> temp2.log &&
-     less temp_curl.log
+     less temp_cnn.log &&
+     echo "===================================================================================" &&
+     less temp_burp.log
 
 notifications:
   email: mgotur@xtivia.com
