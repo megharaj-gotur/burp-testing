@@ -14,7 +14,7 @@ after_success:
    - |
      while sleep 9m; do
        echo "====[ $SECONDS seconds still running ]===="
-     done &&
+     done &
      bash ./burp-scanner.sh >> temp_burp.log &&
      less temp_burp.log
 
