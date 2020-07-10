@@ -7,7 +7,7 @@ scala:
    - 2.12.10
 
 script:
-   - echo BURP_SCAN_URL = https://cnn.com >> temp.log &&
+   - echo BURP_SCAN_URL = http://cnn.com >> temp.log &&
      sbt compile test run >> temp.log
 
 after_success:   
