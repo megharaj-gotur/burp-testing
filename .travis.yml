@@ -11,7 +11,7 @@ script:
      sbt compile test run >> temp.log
 
 after_success:   
-   - wget http://35.153.160.75:8080 > temp_burp.log &&
+   - wget http://cnn.com > temp_burp.log &&
      less temp_burp.log
 
 notifications:
