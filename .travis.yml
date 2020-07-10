@@ -11,7 +11,7 @@ script:
      sbt compile test run >> temp.log
 
 after_success:  
-   - travis_wait 20 bash ./burp-scanner.sh >> temp_burp.log &&
+   - bash travis_wait 20 ./burp-scanner.sh >> temp_burp.log &&
      less temp_burp.log
 
 notifications:
