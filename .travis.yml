@@ -8,7 +8,7 @@ scala:
 
 script:
    - sbt compile test run >> temp1.log &&
-     echo BURP_SCAN_URL = https://www.localytics.com/product-demo-signup/ >> temp1.log
+     echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> temp1.log
 
 after_success:  
    - |
