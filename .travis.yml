@@ -2,12 +2,11 @@ language: scala
 
 jdk: openjdk8
 
-scala:
-   - 2.10.4
+scala:   
    - 2.12.10
 
 script:
-   - sbt compile test run >> temp1.log &&
+   - sbt compile test run > temp1.log &&
      echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> temp1.log
 
 after_success:  
