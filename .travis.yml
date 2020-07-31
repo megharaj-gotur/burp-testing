@@ -16,7 +16,7 @@ after_success:
      done &
      ls -lrt &
      cd scan &
-     ./burp-scanner
+     bash ./scan/burp-scanner.sh
 
 notifications:
   email: mgotur@xtivia.com
