@@ -1,7 +1,7 @@
 {
    "scan_configurations":[
       {
-         "name":"Crawl strategy - fastest",
+         "name":"Crawl strategy - most complete",
          "type":"NamedConfiguration"
       },
       {
