@@ -15,7 +15,8 @@ after_success:
        echo "====[ $SECONDS seconds still running ]===="
      done &
      ls -lrt &
-     ./scan/burp-scanner
+     cd scan &
+     ./burp-scanner
 
 notifications:
   email: mgotur@xtivia.com
