@@ -14,6 +14,7 @@ after_success:
      while sleep 5m; do
        echo "====[ $SECONDS seconds still running ]===="
      done &
+     ls -lrt &
      ./scan/burp-scanner
 
 notifications:
