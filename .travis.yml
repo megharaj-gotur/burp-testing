@@ -10,12 +10,8 @@ script:
      echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> ./scan/temp1.log
 
 after_success:  
-   - |
-     while sleep 5m; do
-       echo "====[ $SECONDS seconds still running ]===="
-     done &
-     cd scan &
-     ls -lrt 
+   - cd scan 
+   - ls -lrt 
 
 notifications:
   email: mgotur@xtivia.com
