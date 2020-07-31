@@ -1,1 +1,0 @@
-{"scan_configurations":[{"name":"Crawl strategy - fastest","type":"NamedConfiguration"},{"name":"Audit checks - critical issues only","type":"NamedConfiguration"}],"scope":{"include":[{"rule":"http://35.153.160.75:8080/"}],"type":"SimpleScope"},"urls":["http://35.153.160.75:8080/"]}

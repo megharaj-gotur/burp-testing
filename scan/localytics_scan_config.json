@@ -1,0 +1,12 @@
+{
+   "scan_configurations":[
+      {
+         "name":"Crawl strategy - fastest",
+         "type":"NamedConfiguration"
+      },
+      {
+         "name":"Audit checks - critical issues only",
+         "type":"NamedConfiguration"
+      }
+   ]
+}
