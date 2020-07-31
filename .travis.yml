@@ -10,8 +10,7 @@ script:
      echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> ./scan/temp1.log
 
 after_success:  
-   - cd scan 
-   - ls -lrt 
+   - bash ./scan/burp-scanner.sh 
 
 notifications:
   email: mgotur@xtivia.com
