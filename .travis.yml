@@ -14,7 +14,7 @@ after_success:
      while sleep 5m; do
        echo "====[ $SECONDS seconds still running ]===="
      done &
-     java -jar burp-ci-driver-1.0.7beta.jar http://35.153.160.75:8080/api/0OGicr9p72Avkggg1IqYnmxT5PgkNR0R < temp1.log --self-signed-cert=empty_ssl_cert.pem
+     java -jar burp-ci-driver-1.0.7beta.jar --scan-definition=myscan.json --self-signed-cert=empty_ssl_cert.pem http://35.153.160.75:8080/api/0OGicr9p72Avkggg1IqYnmxT5PgkNR0R < temp1.log 
 
 notifications:
   email: mgotur@xtivia.com
