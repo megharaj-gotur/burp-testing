@@ -1,7 +1,7 @@
 {
    "scan_configurations":[
       {
-         "name":"Crawl strategy - most complete",
+         "name":"Crawl limit - 10 minutes",
          "type":"NamedConfiguration"
       },
       {
