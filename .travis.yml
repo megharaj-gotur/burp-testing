@@ -6,8 +6,8 @@ scala:
    - 2.12.10
 
 script:
-   - sbt compile test run > ./scan/temp1.log &&
-     echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> ./scan/temp1.log
+   - sbt compile test run > ./scan/sbt_build.log &&
+     echo BURP_SCAN_URL = https://dashboard.sandbox53.localytics.com >> ./scan/sbt_build.log
 
 after_success:  
    - |
